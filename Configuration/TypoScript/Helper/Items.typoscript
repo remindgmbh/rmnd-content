@@ -1,0 +1,66 @@
+lib.rmndContentItems = JSON
+lib.rmndContentItems {
+    dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = rmnd_content_items
+            where.data = field:_LOCALIZED_UID // field:uid
+		    where.wrap = tt_content = |
+            as = items
+            fields {
+                header = TEXT
+                header {
+                    field = header
+                }
+                headerLayout = TEXT
+                headerLayout {
+                    field = header_layout
+                    intval = 1
+                }
+                headerLink = TEXT
+                headerLink {
+                    field = header_link
+                    htmlSpecialChars = 1
+                    typolink {
+                        parameter {
+                            field = header_link
+                        }
+                        returnLast = url
+                    }
+                }
+                headerPosition = TEXT
+                headerPosition {
+                    field = header_position
+                }
+                subheader = TEXT
+                subheader {
+                    field = subheader
+                }
+                bodytext = TEXT
+                bodytext {
+                    field = bodytext
+                    parseFunc =< lib.parseFunc_links
+                }
+                gallery = TEXT
+                gallery {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = image
+                            as = files
+                        }
+                        20 = FriendsOfTYPO3\Headless\DataProcessing\GalleryProcessor
+                        20 {
+                            maxGalleryWidth = {$styles.content.textmedia.maxW}
+                            maxGalleryWidthInText = {$styles.content.textmedia.maxWInText}
+                            columnSpacing = {$styles.content.textmedia.columnSpacing}
+                            borderWidth = {$styles.content.textmedia.borderWidth}
+                            borderPadding = {$styles.content.textmedia.borderPadding}
+                            as = gallery
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

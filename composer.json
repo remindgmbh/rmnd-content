@@ -1,0 +1,39 @@
+{
+    "name": "remind/content",
+    "type": "typo3-cms-extension",
+    "description": "This extension contains default generic content elements",
+    "license": ["GPL-3.0-or-later"],
+    "authors": [
+        {
+            "name": "REMIND GmbH",
+            "email": "technik@remind.de"
+        },
+        {
+            "name": "David Mellen",
+            "email": "d.mellen@remind.de"
+        }
+    ],
+    "autoload": {
+       "psr-4": {
+          "Remind\\Content\\": "Classes/"
+       }
+    },
+    "require": {
+       "typo3/cms-core": "^10.4.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.remind.de/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "rmnd_content",
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".build/web"
+        }
+    }
+ }
