@@ -9,6 +9,16 @@ lib.rmndContentItems {
             pidInList.field = pid
             as = items
             fields {
+                id = TEXT
+                id {
+                    field = uid
+                    intval = 1
+                }
+                pid = TEXT
+                pid {
+                    field = pid
+                    intval = 1
+                }
                 header = TEXT
                 header {
                     field = header
