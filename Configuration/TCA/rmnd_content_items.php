@@ -189,6 +189,14 @@ return [
                 'softref' => 'email[subst]',
             ],
         ],
+        'title' => [
+            'label' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.title',
+            'config' => [
+                'type' => 'input',
+                'size' => 50,
+                'max' => 256,
+            ],
+        ],
         'bodytext' => [
             'l10n_mode' => 'prefixLangTitle',
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.text',
@@ -342,6 +350,7 @@ return [
             'showitem' => '
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     --palette--;;headers,
+                    title,
                     bodytext;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:bodytext_formlabel,
                 --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
                     image,

@@ -15,6 +15,15 @@
             <trans-unit id="backend_layout.column.footer">
                 <source>Footer</source>
             </trans-unit>
+            <trans-unit id="content_element.accordion.description">
+                <source>Containing multiple collapsible text elements</source>
+            </trans-unit>
+            <trans-unit id="content_element.accordion.title">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="content_element.accordion.columns.title">
+                <source>Accordion Title</source>
+            </trans-unit>
             <trans-unit id="content_element.header_slider.description">
                 <source>Containing multiple slides consisting of image and text</source>
             </trans-unit>
@@ -32,6 +41,15 @@
             </trans-unit>
             <trans-unit id="content_element.footer_content.title">
                 <source>Footer Content</source>
+            </trans-unit>
+            <trans-unit id="content_element.tabs.description">
+                <source>Containing multiple tabs consisting of text</source>
+            </trans-unit>
+            <trans-unit id="content_element.tabs.title">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="content_element.tabs.columns.title">
+                <source>Tab Title</source>
             </trans-unit>
             <trans-unit id="pages.overview_label">
                 <source>Overview Label</source>
