@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="EXT:rmnd_content/Resources/Private/Language/locallang.xlf" product-name="rmnd_content">
+        <header/>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.main">
+                <source>Main</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.above_breadcrumbs">
+                <source>Above Breadcrumbs</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.footer">
+                <source>Footer</source>
+            </trans-unit>
+            <trans-unit id="content_element.header_slider.description">
+                <source>Containing multiple slides consisting of image and text</source>
+            </trans-unit>
+            <trans-unit id="content_element.header_slider.title">
+                <source>Header Slider</source>
+            </trans-unit>
+            <trans-unit id="content_element.header_slider.columns.autoplay.status">
+                <source>Enable Autoplay</source>
+            </trans-unit>
+            <trans-unit id="content_element.header_slider.columns.autoplay.duration">
+                <source>Duration in ms</source>
+            </trans-unit>
+            <trans-unit id="content_element.footer_content.description">
+                <source>Content Elemenet to be used in Footer</source>
+            </trans-unit>
+            <trans-unit id="content_element.footer_content.title">
+                <source>Footer Content</source>
+            </trans-unit>
+            <trans-unit id="pages.overview_label">
+                <source>Overview Label</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.title">
+                <source>Item</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.h1">
+                <source>H1</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.h2">
+                <source>H2</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.h3">
+                <source>H3</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.h4">
+                <source>H4</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.h5">
+                <source>H5</source>
+            </trans-unit>
+            <trans-unit id="rmnd_content_items.columns.header_layout.h6">
+                <source>H6</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color">
+                <source>Background Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color.none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color.primary">
+                <source>Primary Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color.secondary">
+                <source>Secondary Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color.accent">
+                <source>Accent Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color.white">
+                <source>White</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_color.black">
+                <source>Black</source>
+            </trans-unit>
+            <trans-unit id="tt_content.background_full_width">
+                <source>Full Width Background</source>
+            </trans-unit>
+            <trans-unit id="tt_content.header_layout.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.rmnd_content_items">
+                <source>Items</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_before_inside">
+                <source>Space Before (inside Background)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.space_after_inside">
+                <source>Space After (inside Background)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.textpic.ratio">
+                <source>Text/Image Ratio</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

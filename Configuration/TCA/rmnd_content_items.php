@@ -1,8 +1,9 @@
 <?php
+defined('TYPO3_MODE') || die;
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.title',
+        'title' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.title',
         'label' => 'header',
         'label_alt' => 'subheader,bodytext',
         'tstamp' => 'tstamp',
@@ -106,7 +107,7 @@ return [
         ],
         'tt_content' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.title',
+            'label' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.title',
             'config' => [
                 'type' => 'group',
                 'internal_type' => 'db',
@@ -133,13 +134,13 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.text', '0'],
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.h1', '1'],
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.h2', '2'],
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.h3', '3'],
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.h4', '4'],
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.h5', '5'],
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang_db.xlf:rmnd_content_items.header_layout.h6', '6'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.text', '0'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h1', '1'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h2', '2'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h3', '3'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h4', '4'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h5', '5'],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h6', '6'],
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6', '100']
                 ],
                 'default' => 0
