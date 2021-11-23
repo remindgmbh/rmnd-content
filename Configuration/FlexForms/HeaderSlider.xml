@@ -1,42 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <T3DataStructure>
-    <ROOT>
-        <type>array</type>
-        <el>
-            <autoplay_status>
+    <sheets>
+        <autoplay>
+            <ROOT>
                 <TCEforms>
-                    <label>LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.columns.autoplay.status</label>
-                    <config>
-                        <type>check</type>
-                        <renderType>checkboxToggle</renderType>
-                        <items type="array">
-                            <numIndex index="0" type="array">
-                                <numIndex index="0"></numIndex>
-                                <numIndex index="1"></numIndex>
-                            </numIndex>
-                        </items>
-                    </config>
-                    <onChange>reload</onChange>
+                    <sheetTitle>LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.columns.autoplay</sheetTitle>
                 </TCEforms>
-            </autoplay_status>
-            <autoplay_duration>
-                <TCEforms>
-                    <label>LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.columns.autoplay.duration</label>
-                    <config>
-                        <type>input</type>
-                        <default>3000</default>
-                        <eval>int</eval>
-                        <range>
-                            <lower>500</lower>
-                            <upper>10000</upper>
-                        </range>
-                        <slider>
-                            <step>50</step>
-                        </slider>
-                    </config>
-                    <displayCond>FIELD:autoplay_status:REQ:TRUE</displayCond>
-                </TCEforms>
-            </autoplay_duration>
-        </el>
-    </ROOT>
+                <type>array</type>
+                <el>
+                    <autoplay.status>
+                        <TCEforms>
+                            <label>LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.columns.autoplay.status</label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                            <onChange>reload</onChange>
+                        </TCEforms>
+                    </autoplay.status>
+                    <autoplay.duration>
+                        <TCEforms>
+                            <label>LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.columns.autoplay.duration</label>
+                            <config>
+                                <type>input</type>
+                                <default>3000</default>
+                                <eval>int</eval>
+                                <range>
+                                    <lower>500</lower>
+                                    <upper>10000</upper>
+                                </range>
+                                <slider>
+                                    <step>50</step>
+                                </slider>
+                            </config>
+                            <displayCond>FIELD:autoplay.status:REQ:TRUE</displayCond>
+                        </TCEforms>
+                    </autoplay.duration>
+                </el>
+            </ROOT>
+        </autoplay>
+    </sheets>
 </T3DataStructure>

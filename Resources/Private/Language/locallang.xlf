@@ -30,6 +30,9 @@
             <trans-unit id="content_element.header_slider.title">
                 <source>Header Slider</source>
             </trans-unit>
+            <trans-unit id="content_element.header_slider.columns.autoplay">
+                <source>Autoplay</source>
+            </trans-unit>
             <trans-unit id="content_element.header_slider.columns.autoplay.status">
                 <source>Enable Autoplay</source>
             </trans-unit>
