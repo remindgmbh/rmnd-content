@@ -2,7 +2,7 @@ mod.wizards.newContentElement.wizardItems {
    common {
       elements {
          accordion {
-            iconIdentifier = content-header
+            iconIdentifier = content-accordion
             title = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.accordion.title
             description = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.accordion.description
             tt_content_defValues {
@@ -10,15 +10,15 @@ mod.wizards.newContentElement.wizardItems {
             }
          }
          footer_content {
-            iconIdentifier = content-header
             title = LLL:EXT:bok_provider/Resources/Private/Language/tca.xlf:tt_content.footer_content.title
             description = LLL:EXT:bok_provider/Resources/Private/Language/tca.xlf:tt_content.footer_content.description
+            iconIdentifier = content-footer
             tt_content_defValues {
                CType = footer_content
             }
          },
          header_slider {
-            iconIdentifier = content-header
+            iconIdentifier = content-carousel-item-textandimage
             title = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.title
             description = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.description
             tt_content_defValues {
@@ -26,7 +26,7 @@ mod.wizards.newContentElement.wizardItems {
             }
          },
          tabs {
-            iconIdentifier = content-header
+            iconIdentifier = content-tab
             title = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.tabs.title
             description = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.tabs.description
             tt_content_defValues {

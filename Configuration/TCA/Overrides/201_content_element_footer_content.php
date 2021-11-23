@@ -7,7 +7,7 @@ defined('TYPO3_MODE') || die;
     [
         'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.footer_content.title',
         'footer_content',
-        'content-header',
+        'content-footer',
     ],
     'header',
     'after'

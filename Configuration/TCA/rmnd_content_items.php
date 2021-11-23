@@ -25,6 +25,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'header,subheader,bodytext',
+        'iconfile' => 'EXT:core/Resources/Public/Icons/T3Icons/svgs/actions/actions-folder.svg',
     ],
     'columns' => [
         'sys_language_uid' => [

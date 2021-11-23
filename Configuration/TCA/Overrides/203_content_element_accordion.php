@@ -7,7 +7,7 @@ defined('TYPO3_MODE') || die;
     [
         'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.accordion.title',
         'accordion',
-        'content-header',
+        'content-accordion',
     ],
     'header',
     'after'

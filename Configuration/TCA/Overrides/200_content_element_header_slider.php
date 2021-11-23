@@ -7,7 +7,7 @@ defined('TYPO3_MODE') || die;
     [
         'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.header_slider.title',
         'header_slider',
-        'content-header',
+        'content-carousel-item-textandimage',
     ],
     'header',
     'after'
