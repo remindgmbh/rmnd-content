@@ -57,7 +57,7 @@
         "pmd-xml": "@php ./.build/vendor/phpmd/phpmd/src/bin/phpmd ./Classes xml ./.build/phpmd.xml --reportfile ./.build/logs/pmd.xml --ignore-violations-on-exit",
         "phpcpd": "@php ./.build/vendor/sebastian/phpcpd/phpcpd --log-pmd ./.build/logs/pmd-cpd.xml ./Classes ./Configuration/TCA ./Tests ./ext_emconf.php ./ext_tables.php",
         "test": "@php ./.build/vendor/phpunit/phpunit/phpunit --configuration ./.build/vendor/typo3/testing-framework/Resources/Core/Build/UnitTests.xml --testdox --log-junit ./.build/logs/unitreport.xml --whitelist ./Classes ./Tests/Unit",
-        "conflog": "@php ./.build/vendor/remind/confluence-changelog/bin/conflog conflog:document --spaceKey REBASEMOD",
+        "conflog": "@php ./.build/vendor/remind/confluence-changelog/bin/conflog conflog:document --spaceKey RECONTEXT",
         "phpcs": "@php ./.build/vendor/squizlabs/php_codesniffer/bin/phpcs --report=full --standard=PSR12 --extensions=php ./Classes ./Tests ./Configuration/TCA",
         "phpcbf": "@php .build/vendor/squizlabs/php_codesniffer/bin/phpcbf --standard=PSR12 ./Classes ./Tests ./Configuration/TCA",
         "static-analysis": [
