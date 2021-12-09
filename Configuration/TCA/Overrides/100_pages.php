@@ -15,7 +15,6 @@ defined('TYPO3_MODE') || die;
     ]
 );
 
-
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
     'pages',
     'title',

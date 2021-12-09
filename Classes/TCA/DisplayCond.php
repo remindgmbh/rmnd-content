@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Remind\Content\TCA;
 
-use PDO;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Database\Query\QueryBuilder;
-use TYPO3\CMS\Core\Database\ConnectionPool;
 use Doctrine\DBAL\ForwardCompatibility\Result;
+use PDO;
+use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Database\Query\QueryBuilder;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class DisplayCond
 {
