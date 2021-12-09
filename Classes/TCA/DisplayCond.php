@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Remind\Content\TCA;
 
+use PDO;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -21,12 +22,12 @@ class DisplayCond
             ->select('is_siteroot')
             ->from('pages')
             ->where(
-                $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($record['pid'], \PDO::PARAM_INT)),
+                $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($record['pid'], PDO::PARAM_INT))
             );
 
-        /** @var Result */
+        /** @var $result Result */
         $result = $qb->execute();
 
-        return (bool)$result->fetchOne();
+        return (bool) $result->fetchOne();
     }
 }

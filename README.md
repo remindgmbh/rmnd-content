@@ -1,5 +1,20 @@
 # rmnd-content
 
+[travis-img]: https://img.shields.io/travis/com/remindgmbh/rmnd-content?style=flat-square
+[codecov-img]: https://img.shields.io/codecov/c/github/remindgmbh/rmnd-content?style=flat-square
+[php-v-img]: https://img.shields.io/packagist/php-v/remind/rmnd-content?style=flat-square
+[github-issues-img]: https://img.shields.io/github/issues/remindgmbh/rmnd-content.svg?style=flat-square
+[contrib-welcome-img]: https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat-square
+[license-img]: https://img.shields.io/github/license/remindgmbh/rmnd-content.svg?style=flat-square
+[styleci-img]: https://styleci.io/repos/393364751/shield
+
+[![travis-img]](https://travis-ci.com/github/remindgmbh/rmnd-content)
+[![codecov-img]](https://codecov.io/gh/remindgmbh/rmnd-content)
+[![styleci-img]](https://github.styleci.io/repos/393364751)
+[![php-v-img]](https://packagist.org/packages/remind/rmnd-content)
+[![github-issues-img]](https://github.com/remindgmbh/rmnd-content/issues)
+[![contrib-welcome-img]](https://github.com/remindgmbh/rmnd-content/blob/master/CONTRIBUTING.md)
+[![license-img]](https://github.com/remindgmbh/rmnd-content/blob/master/LICENSE)
 
 
 ## installation

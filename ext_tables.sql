@@ -1,30 +1,22 @@
-CREATE TABLE tt_content (
-    background_color VARCHAR(60) DEFAULT '' NOT NULL,
-    background_full_width TINYINT(1) DEFAULT '0' NOT NULL,
-    rmnd_content_items int(11) unsigned DEFAULT '0',
-    space_before_inside VARCHAR(60) DEFAULT '' NOT NULL,
-    space_after_inside VARCHAR(60) DEFAULT '' NOT NULL,
-);
-
-CREATE TABLE pages (
-    overview_label VARCHAR(60) DEFAULT '' NOT NULL,
-);
+# -----------------------------------------------------------------------------#
+# Table definitions -----------------------------------------------------------#
+# -----------------------------------------------------------------------------#
 
 CREATE TABLE rmnd_content_items (
     uid int(11) unsigned NOT NULL auto_increment,
     pid int(11) DEFAULT '0' NOT NULL,
 
-	tt_content int(11) unsigned DEFAULT '0' NOT NULL,
+    tt_content int(11) unsigned DEFAULT '0' NOT NULL,
 
-	header varchar(255) DEFAULT '' NOT NULL,
+    header varchar(255) DEFAULT '' NOT NULL,
     header_layout varchar(30) DEFAULT '0' NOT NULL,
     header_link varchar(1024) DEFAULT '' NOT NULL,
     header_position varchar(255) DEFAULT '' NOT NULL,
-	subheader varchar(255) DEFAULT '' NOT NULL,
-	bodytext mediumtext,
+    subheader varchar(255) DEFAULT '' NOT NULL,
+    bodytext mediumtext,
     space_before_class varchar(60) DEFAULT '' NOT NULL,
-	space_after_class varchar(60) DEFAULT '' NOT NULL,
-	image int(11) unsigned DEFAULT '0' NOT NULL,
+    space_after_class varchar(60) DEFAULT '' NOT NULL,
+    image int(11) unsigned DEFAULT '0' NOT NULL,
     title varchar(255) DEFAULT '' NOT NULL,
 
     tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -56,4 +48,20 @@ CREATE TABLE rmnd_content_items (
     KEY parent (pid),
     KEY t3ver_oid (t3ver_oid,t3ver_wsid),
     KEY language (l10n_parent,sys_language_uid)
+);
+
+# -----------------------------------------------------------------------------#
+# External Table Changes ------------------------------------------------------#
+# -----------------------------------------------------------------------------#
+
+CREATE TABLE tt_content (
+    background_color VARCHAR(60) DEFAULT '' NOT NULL,
+    background_full_width TINYINT(1) DEFAULT '0' NOT NULL,
+    rmnd_content_items int(11) unsigned DEFAULT '0',
+    space_before_inside VARCHAR(60) DEFAULT '' NOT NULL,
+    space_after_inside VARCHAR(60) DEFAULT '' NOT NULL,
+);
+
+CREATE TABLE pages (
+    overview_label VARCHAR(60) DEFAULT '' NOT NULL,
 );
