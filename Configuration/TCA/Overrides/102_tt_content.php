@@ -21,14 +21,14 @@ defined('TYPO3_MODE') || die;
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.header_layout.text','0'],
-                    ['H1','1'],
-                    ['H2','2'],
-                    ['H3','3'],
-                    ['H4','4'],
-                    ['H5','5'],
-                    ['H6','6'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6','100']
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.header_layout.text', '0'],
+                    ['H1', '1'],
+                    ['H2', '2'],
+                    ['H3', '3'],
+                    ['H4', '4'],
+                    ['H5', '5'],
+                    ['H6', '6'],
+                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6', '100']
                 ],
                 'default' => 0
             ]
