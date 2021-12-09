@@ -24,5 +24,8 @@ before_script:
 
 script:
     - composer run test
+    
+after_script:
+    - composer run conflog --quiet --no-interaction
 
 after_success: bash <(curl -s https://codecov.io/bash)
