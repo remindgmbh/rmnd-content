@@ -1,4 +1,4 @@
-# rmnd-content
+# REMIND - Typo3 Content Extension
 
 [travis-img]: https://img.shields.io/travis/com/remindgmbh/rmnd-content?style=flat-square
 [codecov-img]: https://img.shields.io/codecov/c/github/remindgmbh/rmnd-content?style=flat-square
@@ -19,7 +19,7 @@
 
 ## installation
 
-Use comoser to install the extension using `composer install remind/content`.
+Use comoser to install the extension using `composer install remind/typo3-content`.
 
 Does not require any typoscript at the moment. TSConfig is imported automatically.
 

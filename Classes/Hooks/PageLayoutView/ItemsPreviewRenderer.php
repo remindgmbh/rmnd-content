@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Remind\Content\Hooks\PageLayoutView;
+namespace Remind\Typo3Content\Hooks\PageLayoutView;
 
 use Doctrine\DBAL\Driver\Statement;
 use TYPO3\CMS\Backend\View\PageLayoutView;

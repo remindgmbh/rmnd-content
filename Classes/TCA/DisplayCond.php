@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Remind\Content\TCA;
+namespace Remind\Typo3Content\TCA;
 
 use Doctrine\DBAL\ForwardCompatibility\Result;
 use PDO;
@@ -25,7 +25,7 @@ class DisplayCond
                 $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($record['pid'], PDO::PARAM_INT))
             );
 
-        /** @var $result Result */
+        /** @var Result $result */
         $result = $qb->execute();
 
         return (bool) $result->fetchOne();
