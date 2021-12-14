@@ -1,5 +1,5 @@
 {
-    "name": "remind/content",
+    "name": "remind/typo3-content",
     "type": "typo3-cms-extension",
     "description": "This extension contains default generic content elements",
     "license": [ "GPL-3.0-or-later" ],
@@ -15,12 +15,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Remind\\Content\\": "Classes"
+            "Remind\\Typo3Content\\": "Classes"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Remind\\Content\\Tests\\": "Tests"
+            "Remind\\Typo3Content\\Tests\\": "Tests"
         }
     },
     "config": {
