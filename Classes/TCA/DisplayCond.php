@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Remind\Typo3Content\TCA;
 
-use Doctrine\DBAL\ForwardCompatibility\Result;
 use PDO;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\QueryBuilder;
@@ -18,16 +17,14 @@ class DisplayCond
 
         /** @var QueryBuilder $queryBuilder */
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
-        $qb = $queryBuilder
+        $statement = $queryBuilder
             ->select('is_siteroot')
             ->from('pages')
             ->where(
                 $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($record['pid'], PDO::PARAM_INT))
-            );
+            )
+            ->execute();
 
-        /** @var Result $result */
-        $result = $qb->execute();
-
-        return (bool) $result->fetchOne();
+        return (bool) $statement->fetchOne();
     }
 }
