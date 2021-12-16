@@ -11,7 +11,7 @@ $GLOBALS
     ['SC_OPTIONS']
     ['cms/layout/class.tx_cms_layout.php']
     ['tt_content_drawItem']
-    ['items'] = \Remind\Content\Hooks\PageLayoutView\ItemsPreviewRenderer::class;
+    ['items'] = \Remind\Typo3Content\Hooks\PageLayoutView\ItemsPreviewRenderer::class;
 
 /*******************************************************************************
  * Icon registry                                                               *
