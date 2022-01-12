@@ -120,7 +120,7 @@
             <trans-unit id="tt_content.space_after_inside">
                 <source>Space After (inside Background)</source>
             </trans-unit>
-            <trans-unit id="tt_content.textpic.ratio">
+            <trans-unit id="tt_content.text_image_ratio">
                 <source>Text/Image Ratio</source>
             </trans-unit>
         </body>

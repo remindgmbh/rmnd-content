@@ -5,14 +5,24 @@ TCEFORM {
         }
     }
     tt_content {
+        assets.types {
+            textmedia.config.maxitems = 1
+        }
         frame_class.disabled = 1
         image.types {
             textpic.config.maxitems = 1
-            header_slide.config.maxitems = 1
         }
         imagecols.types {
             textpic {
-                label = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.textpic.ratio
+                label = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.text_image_ratio
+                keepItems = 1,2
+                altLabels {
+                    1 = 1:1
+                    2 = 2:1
+                }
+            }
+            textmedia {
+                label = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.text_image_ratio
                 keepItems = 1,2
                 altLabels {
                     1 = 1:1
@@ -22,6 +32,7 @@ TCEFORM {
             image.disabled = 1
         }
         imageorient.types {
+            textmedia.keepItems = 25,26
             textpic.keepItems = 25,26
             image.disabled = 1
         }
