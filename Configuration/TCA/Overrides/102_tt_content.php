@@ -40,17 +40,16 @@ defined('TYPO3_MODE') || die;
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.none', ''],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.none', 'none'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.primary', 'primary'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.secondary', 'secondary'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.accent', 'accent'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.white', 'white'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.black', 'black'],
                 ],
-                'default' => ''
+                'default' => 'none'
             ],
             'onChange' => 'reload',
-            'displayCond' => 'FIELD:colPos:!=:-1',
         ],
         'background_full_width' => [
             'exclude' => 0,
@@ -65,7 +64,7 @@ defined('TYPO3_MODE') || die;
                    ]
                 ],
             ],
-            'displayCond' => 'FIELD:background_color:REQ:true',
+            'displayCond' => 'FIELD:background_color:!=:none',
         ],
         'space_before_inside' => [
             'exclude' => 0,
@@ -83,7 +82,7 @@ defined('TYPO3_MODE') || die;
                 ],
                 'default' => ''
             ],
-            'displayCond' => 'FIELD:background_color:REQ:true',
+            'displayCond' => 'FIELD:background_color:!=:none',
         ],
         'space_after_inside' => [
             'exclude' => 0,
@@ -101,7 +100,7 @@ defined('TYPO3_MODE') || die;
                 ],
                 'default' => ''
             ],
-            'displayCond' => 'FIELD:background_color:REQ:true',
+            'displayCond' => 'FIELD:background_color:!=:none',
         ]
     ]
 );
