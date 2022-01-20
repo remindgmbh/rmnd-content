@@ -2,6 +2,13 @@
 
 defined('TYPO3_MODE') || die;
 
+$hasBackground = [
+    'AND' => [
+        'FIELD:background_color:!=:none',
+        'FIELD:background_color:REQ:true',
+    ]
+];
+
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
     [
@@ -58,13 +65,13 @@ defined('TYPO3_MODE') || die;
                 'type' => 'check',
                 'renderType' => 'checkboxToggle',
                 'items' => [
-                   [
-                      0 => '',
-                      1 => '',
-                   ]
+                    [
+                        0 => '',
+                        1 => '',
+                    ]
                 ],
             ],
-            'displayCond' => 'FIELD:background_color:!=:none',
+            'displayCond' => $hasBackground
         ],
         'space_before_inside' => [
             'exclude' => 0,
@@ -82,7 +89,7 @@ defined('TYPO3_MODE') || die;
                 ],
                 'default' => ''
             ],
-            'displayCond' => 'FIELD:background_color:!=:none',
+            'displayCond' => $hasBackground
         ],
         'space_after_inside' => [
             'exclude' => 0,
@@ -100,7 +107,7 @@ defined('TYPO3_MODE') || die;
                 ],
                 'default' => ''
             ],
-            'displayCond' => 'FIELD:background_color:!=:none',
+            'displayCond' => $hasBackground
         ]
     ]
 );
