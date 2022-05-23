@@ -120,6 +120,9 @@
             <trans-unit id="tt_content.space_after_inside">
                 <target>Abstand danach (im Hintergrund)</target>
             </trans-unit>
+            <trans-unit id="tt_content.table_header_position.3">
+                <target>Oben und Links</target>
+            </trans-unit>
             <trans-unit id="tt_content.textpic.ratio">
                 <target>Text/Bild Verhältnis</target>
             </trans-unit>
