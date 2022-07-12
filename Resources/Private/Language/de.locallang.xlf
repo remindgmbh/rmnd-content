@@ -24,6 +24,12 @@
             <trans-unit id="content_element.accordion.columns.title">
                 <target>Akkordion Titel</target>
             </trans-unit>
+            <trans-unit id="content_element.footer_content.description">
+                <target>Content Element zur Benutzung in Fußzeile</target>
+            </trans-unit>
+            <trans-unit id="content_element.footer_content.title">
+                <target>Fußzeile Inhalt</target>
+            </trans-unit>
             <trans-unit id="content_element.header_slider.description">
                 <target>Enthält beliebige Slides bestehend aus Bild und Text</target>
             </trans-unit>
@@ -39,11 +45,26 @@
             <trans-unit id="content_element.header_slider.columns.autoplay.duration">
                 <target>Dauer in ms</target>
             </trans-unit>
-            <trans-unit id="content_element.footer_content.description">
-                <target>Content Element zur Benutzung in Fußzeile</target>
+            <trans-unit id="content_element.image.description">
+                <target>Einzelnes Bild</target>
             </trans-unit>
-            <trans-unit id="content_element.footer_content.title">
-                <target>Fußzeile Inhalt</target>
+            <trans-unit id="content_element.image.title">
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.description">
+                <target>Galerie bestehend aus beliebig vielen Bildern</target>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.title">
+                <target>Bildergalerie</target>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.type">
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.type.scroll">
+                <target>Scroll</target>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.type.slide">
+                <target>Slide</target>
             </trans-unit>
             <trans-unit id="content_element.tabs.description">
                 <target>Enthält beliebige Tabs bestehend aus Text</target>

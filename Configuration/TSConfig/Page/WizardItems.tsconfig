@@ -25,6 +25,18 @@ mod.wizards.newContentElement.wizardItems {
                CType = header_slider
             }
          },
+         image {
+            title = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.image.title
+            description = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.image.description
+         },
+         image_gallery {
+            iconIdentifier = content-gallery
+            title = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.image_gallery.title
+            description = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.image_gallery.description
+            tt_content_defValues {
+               CType = image_gallery
+            }
+         },
          tabs {
             iconIdentifier = content-tab
             title = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.tabs.title
@@ -34,6 +46,6 @@ mod.wizards.newContentElement.wizardItems {
             }
          }
       }
-      show := addToList(accordion, footer_content, header_slider, tabs)
+      show := addToList(accordion, footer_content, header_slider, image_gallery, tabs)
    }
 }

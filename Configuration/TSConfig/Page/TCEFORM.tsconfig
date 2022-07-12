@@ -9,8 +9,12 @@ TCEFORM {
             textmedia.config.maxitems = 1
         }
         cols.disabled = 1
+        CType {
+            altLabels.image = LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:content_element.image.title
+        }
         frame_class.disabled = 1
         image.types {
+            image.config.maxitems = 1
             textpic.config.maxitems = 1
         }
         imagecols.types {

@@ -24,6 +24,12 @@
             <trans-unit id="content_element.accordion.columns.title">
                 <source>Accordion Title</source>
             </trans-unit>
+            <trans-unit id="content_element.footer_content.description">
+                <source>Content Elemenet to be used in Footer</source>
+            </trans-unit>
+            <trans-unit id="content_element.footer_content.title">
+                <source>Footer Content</source>
+            </trans-unit>
             <trans-unit id="content_element.header_slider.description">
                 <source>Containing multiple slides consisting of image and text</source>
             </trans-unit>
@@ -39,11 +45,26 @@
             <trans-unit id="content_element.header_slider.columns.autoplay.duration">
                 <source>Duration in ms</source>
             </trans-unit>
-            <trans-unit id="content_element.footer_content.description">
-                <source>Content Elemenet to be used in Footer</source>
+            <trans-unit id="content_element.image.description">
+                <source>One Image only</source>
             </trans-unit>
-            <trans-unit id="content_element.footer_content.title">
-                <source>Footer Content</source>
+            <trans-unit id="content_element.image.title">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.description">
+                <source>Gallery containing multiple images</source>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.title">
+                <source>Image Gallery</source>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.type.scroll">
+                <source>Scroll</source>
+            </trans-unit>
+            <trans-unit id="content_element.image_gallery.type.slide">
+                <source>Slide</source>
             </trans-unit>
             <trans-unit id="content_element.tabs.description">
                 <source>Containing multiple tabs consisting of text</source>
