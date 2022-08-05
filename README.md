@@ -23,7 +23,12 @@ Use comoser to install the extension using `composer install remind/typo3-conten
 
 Does not require any typoscript at the moment. TSConfig is imported automatically.
 
+Add the following to your site config for backend layouts to work:
 
+```
+imports:
+  - { resource: "EXT:rmnd_content/Configuration/Site/settings.yaml" }
+```
 
 ## dependencies
 
@@ -35,7 +40,7 @@ Besides typo3 the only required dependency is [content-defender](https://extensi
 
 ### default
 
-The default layout consists of 1 column with 3 rows. Besides the main content (colPos = 0) there is also one column for content above the breadcrumbs (colPos = 1) and the footer (colPos = 2).
+The default layout consists of 1 column with 3 rows. Besides the main content (colPos = 0) there is also one column for content above the breadcrumbs (colPos = 1) and the footer (colPos = 10).
 
 The [content defender](https://extensions.typo3.org/extension/content_defender) extension is used to only allow exactly one footer_content content element in the footer column. The footer_content content element can not be used in the other columns.
 
