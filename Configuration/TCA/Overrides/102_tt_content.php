@@ -108,6 +108,33 @@ $hasBackground = [
                 'default' => ''
             ],
             'displayCond' => $hasBackground
+        ],
+        'cookie_category' => [
+            'exclude' => 0,
+            'label' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.none', null],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.necessary', 0],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.preferences', 1],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.statistics', 2],
+                    ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.marketing', 3],
+                ],
+                'default' => ''
+            ],
+        ],
+        'cookie_message' => [
+            'l10n_mode' => 'prefixLangTitle',
+            'label' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.message',
+            'config' => [
+                'type' => 'text',
+                'cols' => 80,
+                'rows' => 10,
+                'softref' => 'typolink_tag,images,email[subst],url',
+                'enableRichtext' => true
+            ]
         ]
     ]
 );
@@ -132,3 +159,6 @@ $hasBackground = [
     'space_after_inside',
     'after:space_after_class'
 );
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_category');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_message');

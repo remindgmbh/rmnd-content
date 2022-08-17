@@ -129,6 +129,27 @@
             <trans-unit id="tt_content.background_full_width">
                 <target>Hintergrund über gesamte Breite</target>
             </trans-unit>
+            <trans-unit id="tt_content.cookie.category">
+                <target>Cookie Kategorie</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cookie.category.none">
+                <target>Keine</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cookie.category.necessary">
+                <target>Notwendig</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cookie.category.preferences">
+                <target>Präferenzen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cookie.category.statistics">
+                <target>Statistiken</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cookie.category.marketing">
+                <target>Marketing</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cookie.message">
+                <target>Cookie Meldung</target>
+            </trans-unit>
             <trans-unit id="tt_content.header_layout.text">
                 <target>Text</target>
             </trans-unit>

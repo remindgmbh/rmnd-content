@@ -60,6 +60,8 @@ CREATE TABLE tt_content (
     rmnd_content_items int(11) unsigned DEFAULT '0',
     space_before_inside VARCHAR(60) DEFAULT '' NOT NULL,
     space_after_inside VARCHAR(60) DEFAULT '' NOT NULL,
+    cookie_category TINYINT(1),
+    cookie_message mediumtext,
 );
 
 CREATE TABLE pages (
