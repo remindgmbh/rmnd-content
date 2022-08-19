@@ -122,7 +122,7 @@ $hasBackground = [
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.statistics', 2],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.marketing', 3],
                 ],
-                'default' => ''
+                'default' => null
             ],
         ],
         'cookie_message' => [
