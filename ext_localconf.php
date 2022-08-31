@@ -8,17 +8,6 @@ defined('TYPO3') or die();
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('@import "EXT:rmnd_content/Configuration/TSConfig/Page/*.tsconfig"');
 
     /*******************************************************************************
-     * Overrides                                                                   *
-     ******************************************************************************/
-
-    $GLOBALS
-        ['TYPO3_CONF_VARS']
-        ['SC_OPTIONS']
-        ['cms/layout/class.tx_cms_layout.php']
-        ['tt_content_drawItem']
-        ['items'] = \Remind\Typo3Content\Hooks\PageLayoutView\ItemsPreviewRenderer::class;
-
-    /*******************************************************************************
      * Icon registry                                                               *
      ******************************************************************************/
 

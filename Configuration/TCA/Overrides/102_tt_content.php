@@ -162,3 +162,5 @@ $hasBackground = [
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_category');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_message');
+
+$GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer'] = \Remind\Typo3Content\Backend\Preview\ContentWithItemsPreviewRenderer::class;
