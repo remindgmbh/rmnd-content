@@ -19,4 +19,6 @@ defined('TYPO3') or die();
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:rmnd_content/Resources/Public/Icons/content-footer.svg']
     );
+
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['routing']['enhancers']['QueryExtbase'] = \Remind\Typo3Content\Routing\Enhancer\QueryExtbasePluginEnhancer::class;
 })();
