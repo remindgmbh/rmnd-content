@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Remind\Typo3Content\Routing\Enhancer;
 
-use TYPO3\CMS\Core\Routing\Enhancer\RoutingEnhancerInterface;
-use TYPO3\CMS\Core\Routing\Enhancer\ResultingInterface;
-use TYPO3\CMS\Core\Routing\RouteCollection;
-use TYPO3\CMS\Core\Routing\PageArguments;
-use TYPO3\CMS\Core\Routing\Route;
+use InvalidArgumentException;
+use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+use TYPO3\CMS\Core\Routing\Aspect\LocaleModifier;
+use TYPO3\CMS\Core\Routing\Aspect\MappableAspectInterface;
+use TYPO3\CMS\Core\Routing\Aspect\StaticMappableAspectInterface;
 use TYPO3\CMS\Core\Routing\Enhancer\AbstractEnhancer;
 use TYPO3\CMS\Core\Routing\Enhancer\InflatableEnhancerInterface;
+use TYPO3\CMS\Core\Routing\Enhancer\ResultingInterface;
+use TYPO3\CMS\Core\Routing\Enhancer\RoutingEnhancerInterface;
+use TYPO3\CMS\Core\Routing\PageArguments;
+use TYPO3\CMS\Core\Routing\Route;
+use TYPO3\CMS\Core\Routing\RouteCollection;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
-use TYPO3\CMS\Core\Routing\Aspect\MappableAspectInterface;
-use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use TYPO3\CMS\Core\Utility\Exception\MissingArrayPathException;
-use TYPO3\CMS\Core\Routing\Aspect\LocaleModifier;
-use InvalidArgumentException;
-use TYPO3\CMS\Core\Routing\Aspect\StaticMappableAspectInterface;
 
 class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnhancerInterface, ResultingInterface, InflatableEnhancerInterface
 {
@@ -45,34 +45,31 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
             );
         }
 
-        if (isset($configuration['extension']) && isset($configuration['plugin'])) {
+        if (isset($configuration['extension'], $configuration['plugin'])) {
             $extensionName = $configuration['extension'];
             $pluginName = $configuration['plugin'];
             $extensionName = str_replace(' ', '', ucwords(str_replace('_', ' ', $extensionName)));
             $pluginSignature = strtolower($extensionName . '_' . $pluginName);
             $this->namespace = 'tx_' . $pluginSignature;
-        }
-        else if (isset($configuration['namespace'])) {
+        } elseif (isset($configuration['namespace'])) {
             $this->namespace = $configuration['namespace'];
-        }
-        else {
+        } else {
             throw new InvalidArgumentException(
                 'QueryExtbase route enhancer configuration is missing options \'extension\' and \'plugin\' or \'namespace\'!',
                 1663320190
-                );
+            );
         }
         if (isset($configuration['_controller'])) {
             [$this->controllerName, $this->actionName] = explode('::', $configuration['_controller']);
-        }
-        else {
+        } else {
             throw new InvalidArgumentException(
                 'QueryExtbase route enhancer configuration is missing option \'_controller\'!',
                 1663320227
-                );
+            );
         }
     }
 
-    function enhanceForMatching(RouteCollection $collection): void
+    public function enhanceForMatching(RouteCollection $collection): void
     {
         /** @var Route $defaultPageRoute */
         $defaultPageRoute = $collection->get('default');
@@ -82,7 +79,7 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
         $this->matching = true;
     }
 
-    function enhanceForGeneration(RouteCollection $collection, array $originalParameters): void
+    public function enhanceForGeneration(RouteCollection $collection, array $originalParameters): void
     {
         if (!is_array($originalParameters[$this->namespace] ?? null)) {
             return;
@@ -104,8 +101,7 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
                 if ($value && $aspect instanceof MappableAspectInterface) {
                     $value = $aspect->generate($value);
                 }
-            }
-            catch (MissingArrayPathException $e) {
+            } catch (MissingArrayPathException $e) {
                 $value = null;
             }
             if ($defaultValue !== $value) {
@@ -141,7 +137,7 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
         );
     }
 
-    function buildResult(Route $route, array $results, array $remainingQueryParameters = array()): PageArguments
+    public function buildResult(Route $route, array $results, array $remainingQueryParameters = []): PageArguments
     {
         $page = $route->getOption('_page');
         $pageId = (int)(isset($page['t3ver_oid']) && $page['t3ver_oid'] > 0 ? $page['t3ver_oid'] : $page['uid']);
@@ -161,7 +157,6 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
             $static = false;
             $defaultValue = $this->defaults[$mappedKey] ?? null;
             try {
-
                 $labelAspect = $route->getAspect($mappedKey . 'Label');
                 $label = null;
                 if ($labelAspect instanceof LocaleModifier) {
@@ -179,11 +174,10 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
                         throw new ResourceNotFoundException(
                             sprintf('No routes found for "%s".', $route->getPath()),
                             1663233000
-                            );
+                        );
                     }
                 }
-            }
-            catch (MissingArrayPathException $e) {
+            } catch (MissingArrayPathException $e) {
                 $value = null;
             }
             if ($defaultValue !== $value) {
@@ -198,7 +192,7 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
         return $result;
     }
 
-    function inflateParameters(array $parameters, array $internals = []): array
+    public function inflateParameters(array $parameters, array $internals = []): array
     {
         return $parameters;
     }
