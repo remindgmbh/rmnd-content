@@ -92,7 +92,6 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
 
         $variant = $this->getVariant($defaultPageRoute);
 
-        // TODO: add remaining parameters
         foreach ($this->arguments as $mappedKey => $key) {
             $defaultValue = $this->defaults[$mappedKey] ?? null;
             try {
