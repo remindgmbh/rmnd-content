@@ -31,12 +31,15 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
 
     protected array $arguments;
 
+    protected array $types;
+
     protected bool $matching = false;
 
     public function __construct(array $configuration)
     {
         $this->arguments = $configuration['_arguments'] ?? [];
         $this->defaults = $configuration['defaults'] ?? [];
+        $this->types = $configuration['types'] ?? [0];
 
         if (!isset($configuration['limitToPages']) || empty($configuration['limitToPages'])) {
             throw new InvalidArgumentException(
@@ -142,6 +145,10 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
         $pageId = (int)(isset($page['t3ver_oid']) && $page['t3ver_oid'] > 0 ? $page['t3ver_oid'] : $page['uid']);
         $pageId = (int)($page['l10n_parent'] > 0 ? $page['l10n_parent'] : $pageId);
         $type = $this->resolveType($route, $remainingQueryParameters);
+
+        if (!in_array($type, $this->types)) {
+            return new PageArguments($pageId, $type, $remainingQueryParameters);
+        }
 
         $staticArguments = [
             $this->namespace => [

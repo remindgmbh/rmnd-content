@@ -128,6 +128,9 @@ Replace the default query parameter name with a custom one. Key is the name, val
 ### aspects
 Aspects with the suffix `Label` should use `LocaleModifier` to replace the query parameter name with localized names. So if a query parameter with the argument `page: currentPage` and an Aspect with the key `pageLabel` exists, the localized names would be used.
 
+### types
+Limit the route enhancer to certain page types, for example to enhance solr search result routes but not autocomplete routes. Defaults to `[0]`.
+
 ### example for News Extension
 
 ```
