@@ -51,7 +51,7 @@ $GLOBALS['TCA']['tt_content']['types']['tabs'] = [
                                     --palette--;;access,
                                 --palette--;;hiddenLanguagePalette,
                             ',
-                        ]
+                        ],
                     ],
                 ],
             ],

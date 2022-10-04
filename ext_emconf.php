@@ -11,6 +11,6 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'REMIND GmbH',
     'author_email' => 'd.mellen@remind.de',
     'constraints' => [
-        'depends' => []
-    ]
+        'depends' => [],
+    ],
 ];

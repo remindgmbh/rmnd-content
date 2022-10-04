@@ -6,7 +6,7 @@ $hasBackground = [
     'AND' => [
         'FIELD:background_color:!=:none',
         'FIELD:background_color:REQ:true',
-    ]
+    ],
 ];
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
@@ -19,7 +19,7 @@ $hasBackground = [
                 'type' => 'inline',
                 'foreign_table' => 'rmnd_content_items',
                 'foreign_field' => 'tt_content',
-            ]
+            ],
         ],
         'header_layout' => [
             'exclude' => 0,
@@ -35,10 +35,10 @@ $hasBackground = [
                     ['H4', '4'],
                     ['H5', '5'],
                     ['H6', '6'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6', '100']
+                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6', '100'],
                 ],
-                'default' => 0
-            ]
+                'default' => 0,
+            ],
         ],
         'background_color' => [
             'exclude' => 0,
@@ -54,7 +54,7 @@ $hasBackground = [
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.white', 'white'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.background_color.black', 'black'],
                 ],
-                'default' => 'none'
+                'default' => 'none',
             ],
             'onChange' => 'reload',
         ],
@@ -68,10 +68,10 @@ $hasBackground = [
                     [
                         0 => '',
                         1 => '',
-                    ]
+                    ],
                 ],
             ],
-            'displayCond' => $hasBackground
+            'displayCond' => $hasBackground,
         ],
         'space_before_inside' => [
             'exclude' => 0,
@@ -87,9 +87,9 @@ $hasBackground = [
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large', 'large'],
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large', 'extra-large'],
                 ],
-                'default' => ''
+                'default' => '',
             ],
-            'displayCond' => $hasBackground
+            'displayCond' => $hasBackground,
         ],
         'space_after_inside' => [
             'exclude' => 0,
@@ -105,9 +105,9 @@ $hasBackground = [
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large', 'large'],
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large', 'extra-large'],
                 ],
-                'default' => ''
+                'default' => '',
             ],
-            'displayCond' => $hasBackground
+            'displayCond' => $hasBackground,
         ],
         'cookie_category' => [
             'exclude' => 0,
@@ -122,7 +122,7 @@ $hasBackground = [
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.statistics', 2],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:tt_content.cookie.category.marketing', 3],
                 ],
-                'default' => null
+                'default' => null,
             ],
         ],
         'cookie_message' => [
@@ -133,9 +133,9 @@ $hasBackground = [
                 'cols' => 80,
                 'rows' => 10,
                 'softref' => 'typolink_tag,images,email[subst],url',
-                'enableRichtext' => true
-            ]
-        ]
+                'enableRichtext' => true,
+            ],
+        ],
     ]
 );
 

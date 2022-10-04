@@ -66,7 +66,7 @@ $GLOBALS['TCA']['tt_content']['types']['header_slider'] = [
                         ],
                     ],
                 ],
-            ]
-        ]
-    ]
+            ],
+        ],
+    ],
 ];

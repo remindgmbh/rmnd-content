@@ -51,7 +51,7 @@ $GLOBALS['TCA']['tt_content']['types']['accordion'] = [
                                     --palette--;;access,
                                 --palette--;;hiddenLanguagePalette,
                             ',
-                        ]
+                        ],
                     ],
                 ],
             ],

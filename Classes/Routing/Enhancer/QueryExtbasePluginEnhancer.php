@@ -122,23 +122,6 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
         $this->matching = false;
     }
 
-    private function getVariant(Route $defaultPageRoute): Route
-    {
-        $variant = clone $defaultPageRoute;
-        $variant->setOption('_enhancer', $this);
-        $variant->setAspects($this->aspects);
-        return $variant;
-    }
-
-    protected function deflateParameters(Route $route, array $parameters): array
-    {
-        return $this->getVariableProcessor()->deflateNamespaceParameters(
-            $parameters,
-            $this->namespace,
-            $route->getArguments()
-        );
-    }
-
     public function buildResult(Route $route, array $results, array $remainingQueryParameters = []): PageArguments
     {
         $page = $route->getOption('_page');
@@ -154,7 +137,7 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
             $this->namespace => [
                 'action' => $this->actionName,
                 'controller' => $this->controllerName,
-            ]
+            ],
         ];
 
         $arguments = array_merge([], $staticArguments);
@@ -201,5 +184,22 @@ class QueryExtbasePluginEnhancer extends AbstractEnhancer implements RoutingEnha
     public function inflateParameters(array $parameters, array $internals = []): array
     {
         return $parameters;
+    }
+
+    protected function deflateParameters(Route $route, array $parameters): array
+    {
+        return $this->getVariableProcessor()->deflateNamespaceParameters(
+            $parameters,
+            $this->namespace,
+            $route->getArguments()
+        );
+    }
+
+    private function getVariant(Route $defaultPageRoute): Route
+    {
+        $variant = clone $defaultPageRoute;
+        $variant->setOption('_enhancer', $this);
+        $variant->setAspects($this->aspects);
+        return $variant;
     }
 }

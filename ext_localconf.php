@@ -2,10 +2,17 @@
 
 declare(strict_types=1);
 
-defined('TYPO3') or die();
+defined('TYPO3') or die;
 
 (function () {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('@import "EXT:rmnd_content/Configuration/TSConfig/Page/*.tsconfig"');
+    /*******************************************************************************
+     * TSConfig                                                               *
+     ******************************************************************************/
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        '@import "EXT:rmnd_content/Configuration/TSConfig/Page/*.tsconfig"'
+    );
+
 
     /*******************************************************************************
      * Icon registry                                                               *
@@ -20,5 +27,15 @@ defined('TYPO3') or die();
         ['source' => 'EXT:rmnd_content/Resources/Public/Icons/content-footer.svg']
     );
 
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['routing']['enhancers']['QueryExtbase'] = \Remind\Typo3Content\Routing\Enhancer\QueryExtbasePluginEnhancer::class;
+
+    /*******************************************************************************
+     * Route Enhancers                                                             *
+     ******************************************************************************/
+
+    $GLOBALS
+        ['TYPO3_CONF_VARS']
+        ['SYS']
+        ['routing']
+        ['enhancers']
+        ['QueryExtbase'] = \Remind\Typo3Content\Routing\Enhancer\QueryExtbasePluginEnhancer::class;
 })();

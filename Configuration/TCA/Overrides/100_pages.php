@@ -10,8 +10,8 @@ defined('TYPO3_MODE') || die;
             'label' => 'LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:pages.overview_label',
             'config' => [
                 'type' => 'input',
-            ]
-        ]
+            ],
+        ],
     ]
 );
 

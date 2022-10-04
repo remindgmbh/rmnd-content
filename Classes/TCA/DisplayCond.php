@@ -6,7 +6,6 @@ namespace Remind\Typo3Content\TCA;
 
 use PDO;
 use TYPO3\CMS\Core\Database\ConnectionPool;
-use TYPO3\CMS\Core\Database\Query\QueryBuilder;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class DisplayCond
@@ -15,7 +14,7 @@ class DisplayCond
     {
         ['record' => $record] = $args;
 
-        /** @var QueryBuilder $queryBuilder */
+        /** @var \TYPO3\CMS\Core\Database\Query\QueryBuilder $queryBuilder */
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
         $statement = $queryBuilder
             ->select('is_siteroot')

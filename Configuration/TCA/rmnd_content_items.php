@@ -70,8 +70,8 @@ return [
         ],
         'l10n_source' => [
             'config' => [
-                'type' => 'passthrough'
-            ]
+                'type' => 'passthrough',
+            ],
         ],
         'hidden' => [
             'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
@@ -87,10 +87,10 @@ return [
                 'type' => 'input',
                 'renderType' => 'inputDateTime',
                 'eval' => 'datetime',
-                'default' => 0
+                'default' => 0,
             ],
             'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly'
+            'l10n_display' => 'defaultAsReadonly',
         ],
         'endtime' => [
             'exclude' => true,
@@ -101,11 +101,11 @@ return [
                 'eval' => 'datetime',
                 'default' => 0,
                 'range' => [
-                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
-                ]
+                    'upper' => mktime(0, 0, 0, 1, 1, 2038),
+                ],
             ],
             'l10n_mode' => 'exclude',
-            'l10n_display' => 'defaultAsReadonly'
+            'l10n_display' => 'defaultAsReadonly',
         ],
         'tt_content' => [
             'exclude' => true,
@@ -143,10 +143,10 @@ return [
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h4', '4'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h5', '5'],
                     ['LLL:EXT:rmnd_content/Resources/Private/Language/locallang.xlf:rmnd_content_items.columns.header_layout.h6', '6'],
-                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6', '100']
+                    ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_layout.I.6', '100'],
                 ],
-                'default' => 0
-            ]
+                'default' => 0,
+            ],
         ],
         'header_position' => [
             'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position',
@@ -160,8 +160,8 @@ return [
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.2', 'right'],
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3', 'left'],
                 ],
-                'default' => ''
-            ]
+                'default' => '',
+            ],
         ],
         'header_link' => [
             'exclude' => true,
@@ -179,8 +179,8 @@ return [
                         ],
                     ],
                 ],
-                'softref' => 'typolink'
-            ]
+                'softref' => 'typolink',
+            ],
         ],
         'subheader' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.subheader',
@@ -207,8 +207,8 @@ return [
                 'cols' => 80,
                 'rows' => 10,
                 'softref' => 'typolink_tag,images,email[subst],url',
-                'enableRichtext' => true
-            ]
+                'enableRichtext' => true,
+            ],
         ],
         'space_before_class' => [
             'exclude' => true,
@@ -224,8 +224,8 @@ return [
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large', 'large'],
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large', 'extra-large'],
                 ],
-                'default' => ''
-            ]
+                'default' => '',
+            ],
         ],
         'space_after_class' => [
             'exclude' => true,
@@ -241,8 +241,8 @@ return [
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large', 'large'],
                     ['LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large', 'extra-large'],
                 ],
-                'default' => ''
-            ]
+                'default' => '',
+            ],
         ],
         'image' => [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.images',
@@ -250,7 +250,7 @@ return [
                 'image',
                 [
                     'appearance' => [
-                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
+                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference',
                     ],
                     // custom configuration for displaying fields in the overlay/reference table
                     // to use the imageoverlayPalette instead of the basicoverlayPalette
@@ -258,39 +258,39 @@ return [
                         'types' => [
                             '0' => [
                                 'showitem' => '
-                                --palette--;;imageoverlayPalette,
-                                --palette--;;filePalette'
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette',
                             ],
                             \TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
                                 'showitem' => '
-                                --palette--;;imageoverlayPalette,
-                                --palette--;;filePalette'
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette',
                             ],
                             \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
                                 'showitem' => '
-                                --palette--;;imageoverlayPalette,
-                                --palette--;;filePalette'
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette',
                             ],
                             \TYPO3\CMS\Core\Resource\File::FILETYPE_AUDIO => [
                                 'showitem' => '
-                                --palette--;;audioOverlayPalette,
-                                --palette--;;filePalette'
+                                    --palette--;;audioOverlayPalette,
+                                    --palette--;;filePalette',
                             ],
                             \TYPO3\CMS\Core\Resource\File::FILETYPE_VIDEO => [
                                 'showitem' => '
-                                --palette--;;videoOverlayPalette,
-                                --palette--;;filePalette'
+                                    --palette--;;videoOverlayPalette,
+                                    --palette--;;filePalette',
                             ],
                             \TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
                                 'showitem' => '
-                                --palette--;;imageoverlayPalette,
-                                --palette--;;filePalette'
-                            ]
+                                    --palette--;;imageoverlayPalette,
+                                    --palette--;;filePalette',
+                            ],
                         ],
                     ],
                 ],
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            )
+            ),
         ],
     ],
     'palettes' => [

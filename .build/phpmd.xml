@@ -27,4 +27,3 @@
     <!-- Import the entire unused code rule set -->
     <rule ref="rulesets/unusedcode.xml"/>
 </ruleset>
-
