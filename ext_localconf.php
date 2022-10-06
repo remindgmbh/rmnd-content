@@ -13,7 +13,6 @@ defined('TYPO3') or die;
         '@import "EXT:rmnd_content/Configuration/TSConfig/Page/*.tsconfig"'
     );
 
-
     /*******************************************************************************
      * Icon registry                                                               *
      ******************************************************************************/
@@ -26,7 +25,6 @@ defined('TYPO3') or die;
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => 'EXT:rmnd_content/Resources/Public/Icons/content-footer.svg']
     );
-
 
     /*******************************************************************************
      * Route Enhancers                                                             *
