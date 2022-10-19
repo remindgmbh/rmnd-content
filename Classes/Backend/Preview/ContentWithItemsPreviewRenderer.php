@@ -18,7 +18,9 @@ class ContentWithItemsPreviewRenderer extends StandardContentPreviewRenderer
         $record = $item->getRecord();
 
         if ($record['rmnd_content_items']) {
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('rmnd_content_items')->createQueryBuilder();
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+                ->getConnectionForTable('rmnd_content_items')
+                ->createQueryBuilder();
             $queryBuilder
                 ->select('*')
                 ->from('rmnd_content_items')

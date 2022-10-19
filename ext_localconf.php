@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+use Remind\Typo3Content\Routing\Enhancer\QueryExtbasePluginEnhancer;
+use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
+use TYPO3\CMS\Core\Imaging\IconRegistry;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+
 defined('TYPO3') or die;
 
 (function () {
@@ -9,7 +15,7 @@ defined('TYPO3') or die;
      * TSConfig                                                               *
      ******************************************************************************/
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    ExtensionManagementUtility::addPageTSConfig(
         '@import "EXT:rmnd_content/Configuration/TSConfig/Page/*.tsconfig"'
     );
 
@@ -18,11 +24,11 @@ defined('TYPO3') or die;
      ******************************************************************************/
 
     /* @var $iconRegistry \TYPO3\CMS\Core\Imaging\IconRegistry */
-    $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+    $iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
 
     $iconRegistry->registerIcon(
         'content-footer',
-        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        SvgIconProvider::class,
         ['source' => 'EXT:rmnd_content/Resources/Public/Icons/content-footer.svg']
     );
 
@@ -35,5 +41,5 @@ defined('TYPO3') or die;
         ['SYS']
         ['routing']
         ['enhancers']
-        ['QueryExtbase'] = \Remind\Typo3Content\Routing\Enhancer\QueryExtbasePluginEnhancer::class;
+        ['QueryExtbase'] = QueryExtbasePluginEnhancer::class;
 })();

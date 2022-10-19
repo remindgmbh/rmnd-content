@@ -2,6 +2,9 @@
 
 defined('TYPO3_MODE') || die;
 
+use Remind\Typo3Content\Backend\Preview\ContentWithItemsPreviewRenderer;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 $hasBackground = [
     'AND' => [
         'FIELD:background_color:!=:none',
@@ -9,7 +12,7 @@ $hasBackground = [
     ],
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
     [
         'rmnd_content_items' => [
@@ -139,28 +142,28 @@ $hasBackground = [
     ]
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'frames',
     '--linebreak--,background_color,background_full_width,--linebreak--',
     'after:frame_class'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'frames',
     'space_before_inside',
     'after:space_before_class'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addFieldsToPalette(
+ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'frames',
     'space_after_inside',
     'after:space_after_class'
 );
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_category');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_message');
+ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_category');
+ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'cookie_message');
 
-$GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer'] = \Remind\Typo3Content\Backend\Preview\ContentWithItemsPreviewRenderer::class;
+$GLOBALS['TCA']['tt_content']['ctrl']['previewRenderer'] = ContentWithItemsPreviewRenderer::class;
